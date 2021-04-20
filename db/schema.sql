@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS pantry_db;
-CREATE DATABASE pantry_db;
+DROP DATABASE IF EXISTS fancy_pantry_db;
+CREATE DATABASE fancy_pantry_db;
