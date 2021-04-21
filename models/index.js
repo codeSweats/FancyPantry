@@ -2,13 +2,14 @@ const Inventory = require("./Inventory");
 const ShoppingList = require("./ShoppingList");
 const User = require("./User");
 
-User.hasOne(ShoppingList, {
-    foreignKey: 'list_id',
-    onDelete: 'CASCADE'
+Inventory.belongsToMany(User, {
+    through: { model: ShoppingList, unique: false },
+    as: "lists"
 });
 
-ShoppingList.belongsTo(Inventory, {
-    foreignKey: "prod_Name"
+User.belongsToMany(Inventory, {
+    through: { model: ShoppingList, unique: false },
+    as: "items"
 });
 
 module.exports = { Inventory, ShoppingList, User };
