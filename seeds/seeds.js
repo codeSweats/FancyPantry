@@ -3,7 +3,7 @@ const { User } = require('../models');
 
 const seedShoppingList = require('./shoppingListData');
 const seedInventory = require('./inventoryData');
-
+const userData = [];
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
