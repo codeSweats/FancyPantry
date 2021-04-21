@@ -58,53 +58,6 @@ try {
 });
 
 
-// router.post('/signup', async (req, res) => {
-//     console.log(req.body);
-//     try {
-//         // Find the user who matches the posted e-mail address
-//         const userCreate = await User.create({username:req.body.username, password:req.body.password, email:req.body.email });
-    
-//         // if (!userCreate) {
-//         // res
-//         //     .status(400)
-        //     .json({ message: 'Incorrect email or password, please try again' });
-        // return;
-        // }
-    
-        // // Verify the posted password with the password store in the database
-        // const validPassword = await userData.checkPassword(req.body.password);
-    
-        // if (!validPassword) {
-        // res
-        //     .status(400)
-        //     .json({ message: 'Incorrect email or password, please try again' });
-        // return;
-        // }
-    
-    //     // Create session variables based on the logged in user
-    //     req.session.save(() => {
-    //     req.session.user_id = userCreate.id;
-    //     req.session.logged_in = true;
-        
-    //     res.json(userCreate);
-    //     });
-    
-    // } catch (err) {
-    //     res.status(500).json(err);
-    // }
-    // });
-
-
-
-
-
-
-
-
-
-
-
-
 router.post('/logout', (req, res) => {
 if (req.session.logged_in) {
     // Remove the session variables
