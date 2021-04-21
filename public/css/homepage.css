@@ -1,5 +1,6 @@
+
 .back {
-  background: #e2e2e2;
+  background: #ddd;
   width: 100%;
   position: absolute;
   top: 0;
@@ -33,4 +34,11 @@ div.content {
   vertical-align: middle;
 }
 
-
+.card {
+  margin: auto;
+  max-width: 950px;
+  width: 90%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  border: transparent
+}

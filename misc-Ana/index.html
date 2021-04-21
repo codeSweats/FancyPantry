@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="public/css/homepage.css">
-    <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-  <title>Fancy Pantry</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="/public/css/shoppinglist.css">
+    <!-- Favicon-->
+    <link rel="icon" href="/public/img/shopping_cart_full.png" type="image/icon type">
+    <title>Fancy Pantry</title>
 </head>
+
 <body>
-    <div class="back">
-
-       
-        <div class="div-center">
-            <div class="content">
-                <img src="public/img/fancy_pantry.png" alt="Fancy Pantry Logo">
-                <hr />
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <main class="container-fluid align-self-center">
+        <div class="card">
+            <div class="col-sm-11 cart align-self-center">
+                <img class="card-img-top" src="/public/img/fancy_pantry.png" alt="Fancy Pantry Logo">
+                <div class=" border-top border-bottom">
+                    <div class=" main align-items-center">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class=" form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <button type="submit" class="btn btn-primary ">SUBMIT</button>
+                                <div class="btn-group mr-2" role="group" aria-label="First group">
+                                    <button type="submit" class="btn btn-primary ">SIGN UP</button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="second group">
+                                    <button type="button" class="btn btn-secondary">RESET</button>
+                                </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    <hr />
-                    <button type="button" class="btn btn-link">Signup</button>
-                    <button type="button" class="btn btn-link">Reset Password</button>
-                </form>
+                </div>
             </div>
+            <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
         </div>
-        
+        </div>
+    </main>
 </body>
-</html>
 
+</html>
