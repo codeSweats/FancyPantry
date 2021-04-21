@@ -13,4 +13,3 @@ User.belongsToMany(Inventory, {
 });
 
 module.exports = { Inventory, ShoppingList, User };
-
