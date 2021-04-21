@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
-router.get('/',  async (req, res) => { //add withAuth,
+router.get('/',  withAuth, async (req, res) => { 
     res.render('shoppinglist')
 });
 
