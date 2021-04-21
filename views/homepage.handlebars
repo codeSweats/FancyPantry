@@ -3,27 +3,23 @@
         <img class="card-img-top" src="/img/fancy_pantry.png" alt="Fancy Pantry Logo">
         <div class=" border-top border-bottom">
             <div class=" main align-items-center">
-                <form>
+                <form class="login-form">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class=" form-label">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
-                        </div>
+                        <label for="exampleInputEmail1" class=" form-label">Email</label>
+                        <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+                        
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <input type="password" class="form-control" id="password-login">
                         <button type="submit" class="btn btn-primary ">SUBMIT</button>
                         <div class="btn-group mr-2" role="group" aria-label="First group">
-                            <a href="/signup" class="btn btn-primary"> SIGN UP</a>
-                        </div>
-                        <div class="btn-group" role="group" aria-label="second group">
-                            <button type="button" class="btn btn-secondary">RESET</button>
+                            <a href="/signup" class="btn btn-secondary"> SIGN UP</a>
                         </div>
                 </form>
             </div>
         </div>
     </div>
-    <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
 </div>
 </div>
+<script src="/js/login.js"></script>
