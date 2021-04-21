@@ -5,10 +5,15 @@ class ShoppingList extends Model { }
 
 ShoppingList.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         item_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            primaryKey: true,
         },
         price: {
             type: DataTypes.DECIMAL,
