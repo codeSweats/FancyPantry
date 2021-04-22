@@ -8,6 +8,7 @@ router.post('/', async (req, res) => {
         const addItem = await ShoppingList.create({
             ...req.body,
             item_name: req.session.item_name,
+            //user from req.ses.user_id
         });
         res.status(200).json(addItem);
     } catch (err) {
