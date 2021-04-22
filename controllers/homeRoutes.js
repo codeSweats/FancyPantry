@@ -10,6 +10,7 @@ router.get('/', withAuth, async (req, res) => {
             include: [{model: Inventory, through: ShoppingList, as: "items"}],
         });
         const user = userData.get({plain: true});
+        console.log(user);
         res.render('shoppinglist', {
             ...user,
             logged_in: true

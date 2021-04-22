@@ -1,12 +1,14 @@
 const addItem = async (event) => {
+    console.log(event);
     event.preventDefault();
     // Collect values from the login form
-    const item = document.querySelector('#item-form').value.trim();
-    if (item) {
+    const item = document.querySelector('.form-control').value;
+    const dataId = event.target.options[event.target.selectedIndex].dataset.id;
+    // if (item) {
         // Send a POST request to the API endpoint
-        const response = await fetch('/api/users/', {
-            method: 'PUT',
-            body: JSON.stringify({ item }),
+        const response = await fetch('/api/list/', {
+            method: 'POST',
+            body: JSON.stringify({ item_name: item, item_id: dataId, }),
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
@@ -15,8 +17,8 @@ const addItem = async (event) => {
         } else {
             alert(response.statusText);
         }
-    }
+    // }
 };
 document
-    .querySelector('.item-form')
-    .addEventListener('key-up', item);
+    .querySelector('.form-control')
+    .addEventListener('change', addItem);
