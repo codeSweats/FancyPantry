@@ -18,6 +18,32 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+// Displays All Inventory
+router.get('/listInventory', async (req, res) => {
+    //const currentInventory = await Inventory.findByPk(1);
+    const currentInventory = await Inventory.findAll();
+    console.log(currentInventory);
+    return res.status(200).json({currentInventory});
+});
+
+// Search Inventory
+router.get('/searchInventory/:item', async (req, res) => {
+
+    const itemToSearch = req.params.item;
+    console.log("Buscando->"+itemToSearch);
+    const currentInventory = await Inventory.findAll({
+        where: {
+            item_name:{
+                [Op.like]:'%'+itemToSearch+'%'
+            }
+        }
+    });
+    
+    ;
+    console.log(currentInventory);
+    return res.status(200).json({currentInventory});
+});
+    
 
 router.get('/login', async (req, res) => {
     res.render('homepage')
