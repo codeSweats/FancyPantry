@@ -7,11 +7,12 @@ const item = async (event) => {
     event.preventDefault();
   
     // Collect values from the login form
-    const item = document.querySelector('#item-form').value.trim();
+    const item = document.querySelector('#item_name').value.trim();
+    const description = document.querySelector('des')
   
     if (item ) {
-      // Send a POST request to the API endpoint
-      const response = await fetch('/api/users/login', {
+      // Send a POST request to the API endpoint                
+      const response = await fetch('/api/', {                   // what endpoint is it going to?
         method: 'POST',
         body: JSON.stringify({ item}),
         headers: { 'Content-Type': 'application/json' },
