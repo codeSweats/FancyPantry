@@ -24,7 +24,7 @@ ShoppingList.init(
                 unique: false
             }
         },
-        item_id: {
+        inventory_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: "inventory",
