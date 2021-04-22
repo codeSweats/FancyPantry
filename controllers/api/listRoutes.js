@@ -1,14 +1,16 @@
 const router = require('express').Router();
 const {ShoppingList} = require('../../models');
+const withAuth = require('../../utils/auth');
 
-//Do I eed authentication? 
 
 router.post('/', async (req, res) => {
     try{
         const addItem = await ShoppingList.create({
             ...req.body,
+            user_id: req.session.user_id,
             item_name: req.session.item_name,
-            //user from req.ses.user_id
+            price: req.session.price,
+           
         });
         res.status(200).json(addItem);
     } catch (err) {
