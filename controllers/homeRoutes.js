@@ -10,6 +10,7 @@ router.get('/', withAuth, async (req, res) => {
             include: [{model: Inventory, through: ShoppingList, as: "items"}],
         });
         const user = userData.get({plain: true});
+        console.log(user);
         res.render('shoppinglist', {
             ...user,
             logged_in: true
@@ -31,7 +32,7 @@ router.get('/listInventory', async (req, res) => {
 router.get('/searchInventory/:item', async (req, res) => {
 
     const itemToSearch = req.params.item;
-    console.log("Buscando->"+itemToSearch);
+    console.log("searching->"+itemToSearch);
     const currentInventory = await Inventory.findAll({
         where: {
             item_name:{
@@ -43,6 +44,15 @@ router.get('/searchInventory/:item', async (req, res) => {
     ;
     console.log(currentInventory);
     return res.status(200).json({currentInventory});
+});
+
+// Deletes  from Inventory by ID
+router.get('/deleteInventoryById/:item_id', async (req, res) => {
+    const itemToDelete = req.params.item_id;
+    Inventory.deleteById(itemToDelete);
+    return res.status(200).json({
+        message: "Inventory deleted successfully"
+    });
 });
     
 
