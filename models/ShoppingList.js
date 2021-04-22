@@ -15,18 +15,7 @@ ShoppingList.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        price: {
-            type: DataTypes.DECIMAL,
-            allowNull: true,
-        },
-        qty: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        category: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        
         user_id: {
             type: DataTypes.INTEGER,
             references: {
