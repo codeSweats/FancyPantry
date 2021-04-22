@@ -19,6 +19,14 @@ const addItem = async (event) => {
         }
     // }
 };
+
+const getItems = async () => {
+    const id="1"
+    const response = await fetch( `/api/list/${id}`)
+    const items = await response.json();
+    console.log(items);
+}
+getItems();
 document
     .querySelector('.form-control')
     .addEventListener('change', addItem);

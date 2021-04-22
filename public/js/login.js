@@ -14,6 +14,7 @@ const submit = async (event) => {
       });
   
       if (response.ok) {
+        localStorage.setItem('response', JSON.stringify(response))
         // If successful, redirect the browser to the profile page
         document.location.replace('/');
       } else {

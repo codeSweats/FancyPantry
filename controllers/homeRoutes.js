@@ -4,13 +4,15 @@ const withAuth = require('../utils/auth');
 const {User, Inventory, ShoppingList} = require('../models');
 
 router.get('/', withAuth, async (req, res) => { 
+   
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: {exclude: ['password']},
             include: [{model: Inventory, through: ShoppingList, as: "items"}],
         });
+        if (!userData) {res.render('homepage')}
         const user = userData.get({plain: true});
-        console.log(user);
+        console.log(user); console.log('-----here------');
         res.render('shoppinglist', {
             ...user,
             logged_in: true

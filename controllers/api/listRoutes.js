@@ -17,5 +17,17 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+router.get('/:id', async (req, res) => {
+    try {
+        const items = await ShoppingList.findAll({where: {user_id: req.params.id} 
+
+        });
+        res.status(200).json(items);
+
+    }catch (err) {
+        res.status(500).json(err);
+    }
+})
 //export
 module.exports = router;
